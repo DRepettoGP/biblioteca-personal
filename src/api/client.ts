@@ -9,10 +9,12 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
       ...options.headers,
     },
     ...options,
+  }).catch(() => {
+    throw new Error('No se pudo conectar con la API.');
   });
 
   if (!response.ok) {
-    const error = (await response.json().catch(() => ({ message: 'Error inesperado' }))) as ApiErrorResponse;
+    const error = (await response.json().catch(() => ({ message: `Error HTTP ${response.status}` }))) as ApiErrorResponse;
     throw new Error(error.message);
   }
 
