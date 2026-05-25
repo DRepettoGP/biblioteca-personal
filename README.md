@@ -4,7 +4,6 @@ NextChapter es una aplicación fullstack para organizar una biblioteca personal.
 
 ## Enlaces
 
-- Repositorio GitHub: https://github.com/DRepettoGP/biblioteca-personal
 - Tablero Trello: https://trello.com/b/MIkiXKvw/mi-tablero-de-trello
 - Frontend en Vercel: pendiente de añadir tras el despliegue
 - API en Vercel: pendiente de añadir tras el despliegue
